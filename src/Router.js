@@ -8,6 +8,9 @@ import knowledgeBaseCategory from "./views/pages/knowledge-base/Category"
 import knowledgeBaseQuestion from "./views/pages/knowledge-base/Questions"
 import { ContextLayout } from "./utility/context/Layout"
 
+
+const home = lazy(() => import("./views/home/home"))
+
 // Route-based code splitting
 const analyticsDashboard = lazy(() =>
   import("./views/dashboard/analytics/AnalyticsDashboard")
@@ -218,6 +221,8 @@ class AppRouter extends React.Component {
       // Set the directory path if you are deploying in sub-folder
       <Router history={history}>
         <Switch>
+        <AppRoute path="/home" component={home} />
+
           <AppRoute exact path="/" component={analyticsDashboard} />
           <AppRoute
             path="/ecommerce-dashboard"
@@ -260,6 +265,8 @@ class AppRouter extends React.Component {
             path="/ui-element/syntaxhighlighter"
             component={syntaxhighlighter}
           />
+                    <AppRoute path="/colors/colors" component={colors} />
+
           <AppRoute path="/colors/colors" component={colors} />
           <AppRoute path="/icons/reactfeather" component={reactfeather} />
           <AppRoute path="/cards/basic" component={basicCards} />
