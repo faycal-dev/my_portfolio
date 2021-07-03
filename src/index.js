@@ -24,7 +24,7 @@ ReactDOM.render(
       <Suspense fallback={<Spinner />}>
         <Layout>
           <IntlProviderWrapper>
-            <LazyApp />
+            <LazyApp/>
           </IntlProviderWrapper>
         </Layout>
       </Suspense>

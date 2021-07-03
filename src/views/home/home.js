@@ -1,19 +1,22 @@
 import React from "react";
 import { ShoppingBag } from "react-feather";
-import { Col, Row } from "reactstrap";
-import { useTransition, animated } from "react-spring";
+import { Col, Row, Button } from "reactstrap";
+import { useTransition, animated, useSpring } from "react-spring";
+import Typewriter from "typewriter-effect";
 import StatisticsCard from "../../components/@vuexy/statisticsCard/StatisticsCard";
+import image from "../../assets/img/home/image3.png";
 
 const Home = () => {
-  const [animate, setAnimate] = React.useState(false);
   const [translate, settranslate] = React.useState([]);
+  const [animate, setAnimate] = React.useState(false);
+  const [start, setstart] = React.useState(false);
   React.useEffect(() => {
     setAnimate(true);
     settranslate([
       {
         html: (
           <Row className="d-flex justify-content-center">
-             <Col lg="2">
+            <Col lg="2">
               <StatisticsCard
                 hideChart
                 iconBg="warning"
@@ -48,7 +51,7 @@ const Home = () => {
       {
         html: (
           <Row className="d-flex justify-content-center">
-             <Col lg="2">
+            <Col lg="2">
               <StatisticsCard
                 hideChart
                 iconBg="warning"
@@ -81,58 +84,113 @@ const Home = () => {
         x: 100,
       },
     ]);
+    setTimeout(() => {
+      setstart(true);
+    }, 1000);
   }, []);
 
-  const transition2 = useTransition(translate, {
-    from:  { x: -300, y: 800, opacity: 0 },
-    enter: (item) => async (next) => {
-      await next({ y: 0, opacity: 1, delay: item.delay });
-      await next({ x: 0 });
-    },
-    // leave:{}
+  const transition1 = useTransition(animate, {
+    from: { opacity: 0 },
+    enter: { opacity: 1, delay: 900 },
+  });
+  const transition3 = useSpring({
+    from: { opacity: .5 },
+    to: { opacity: 1, },
+    loop:{reverse: true },
+   
   });
 
-  const transition = useTransition(animate, {
-    from: { opacity: 0 },
-    enter: { opacity: 1, delay: 1000 },
-    // leave: {},
-  });
+  // const transition2 = useTransition(translate, {
+  //   from: { x: -300, y: 800, opacity: 0 },
+  //   enter: (item) => async (next) => {
+  //     await next({ y: 0, opacity: 1, delay: item.delay });
+  //     await next({ x: 0 });
+  //   },
+  //   // leave:{}
+  // });
 
   return (
     <div>
-      {/* <Card
-        style={{
-          minHeight: height * 0.7,
-          padding: "20px",
-          backgroundColor: "transparent",
-        }}
-      > */}
-      <Row>
-        {transition((style, item) =>
-          item ? (
-            <animated.h3 style={style} className="text-align-center">
-              It is a long established fact that a reader will be distracted by
-              the readable content of a page when looking at its layout. The
-              point of using Lorem Ipsum is that it has a more-or-less normal
-              distribution of letters, as opposed to using 'Content here,
-              content here', making it look like readable English. Many desktop
-              publishing packages and web page editors now use Lorem Ipsum as
-              their default model text, and a search for 'lorem ipsum' will
-              uncover many web sites still in their infancy. Various versions
-              have evolved over the years, sometimes by accident, sometimes on
-              purpose (injected humour and the like).
-            </animated.h3>
-          ) : (
-            ""
-          )
-        )}
+      <Row
+      // style={{
+      //   height: window.innerHeight * 0.7,
+      // }}
+      >
+        <Col className="d-flex justify-content-end ">
+          <div style={{ marginTop: "50px", marginLeft: "20px" }}>
+            <h4 style={{ opacity: 0.3 }}>{"<head>"}</h4>
+            <h1
+              style={{ fontFamily: "cursive" }}
+              className="font-bold font-large-3 ml-3"
+            >
+              Hi, i'm ELMOGHERBI <br />
+              FAYCAL
+            </h1>
+            <h4 style={{ opacity: 0.3 }}>{"</head>"}</h4>
+            <h4 style={{ opacity: 0.3 }} className="mt-3">
+              {"<body>"}
+            </h4>
+            <h3 style={{ fontFamily: "cursive" }} className="ml-3 ">
+              {start && (
+                <Typewriter
+                  options={{
+                    autoStart: true,
+                    delay: 40,
+                    loop: true,
+                    strings: [
+                      "I'm a web developer using REACT JS and DJANGO",
+                      "and",
+                      "I'm a mobile app developer using REACT NATIVE",
+                    ],
+                  }}
+                />
+              )}
+            </h3>
+            <h4 style={{ opacity: 0.3 }}>{"</body>"}</h4>
+            <div style={{ marginTop: "80px" }} className=" ml-3 ">
+                  <animated.div style={transition3}>
+                    {" "}
+                    <Button.Ripple color="white" size="lg" outline>
+                      Contact me !
+                    </Button.Ripple>
+                  </animated.div>
+               
+            </div>
+          </div>
+        </Col>
+        <Col className="d-flex justify-content-center mt-3">
+          {transition1((style, item) =>
+            item ? (
+              <animated.div style={style}>
+                {" "}
+                <img
+                  src={image}
+                  style={{
+                    width: window.innerWidth * 0.3,
+                    height: window.innerWidth * 0.3,
+                    minWidth: "200px",
+                    minHeight: "200px",
+                  }}
+                />
+              </animated.div>
+            ) : (
+              ""
+            )
+          )}
+        </Col>
       </Row>
 
-     <div className="mt-3">
-     {transition2((style, item) =>
-        item ? <animated.div style={style}>{item.html}</animated.div> : ""
-      )}
-     </div>
+      {/* <div
+        className="mt-3 pt-3"
+        style={{
+          height: window.innerHeight * 0.75,
+          width:"100%",
+        }}
+      >
+        {transition2((style, item) =>
+          item ? <animated.div style={style}>{item.html}</animated.div> : ""
+        )}
+      </div> */}
     </div>
   );
 };
