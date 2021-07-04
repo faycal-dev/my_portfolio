@@ -29,7 +29,7 @@ class StatisticsCards extends React.Component {
             </div>
           </div>
           <div className="title-section">
-            <h2 className="text-bold-600 mt-1 mb-25">{this.props.stat}</h2>
+            <h5 className="text-bold-600 mt-1 mb-25">{this.props.stat}</h5>
             <p className="mb-0">{this.props.statTitle}</p>
           </div>
         </CardBody>

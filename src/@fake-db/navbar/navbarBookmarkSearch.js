@@ -3,18 +3,18 @@ import mock from "../mock"
 export const searchResult = [
   {
     id: 1,
-    target: "AnalyticsDashboard",
-    title: "Analytics Dashboard",
-    link: "/",
+    target: "Home",
+    title: "Home",
+    link: "/home",
     icon: "Home",
     starred: false
   },
   {
     id: 2,
-    target: "eCommerceDashboard",
-    title: "eCommerce Dashboard",
-    link: "/ecommerce-dashboard",
-    icon: "Home",
+    target: "Skills",
+    title: "Skills",
+    link: "/skills",
+    icon: "Layers",
     starred: false
   },
   {
@@ -23,7 +23,7 @@ export const searchResult = [
     title: "Todo",
     link: "/todo/all",
     icon: "CheckSquare",
-    starred: true
+    starred: false
   },
   {
     id: 4,
@@ -35,9 +35,9 @@ export const searchResult = [
   },
   {
     id: 5,
-    target: "Email",
-    title: "Email",
-    link: "/email/inbox",
+    target: "Send",
+    title: "Send message",
+    link: "/contact",
     icon: "Mail",
     starred: true
   },
@@ -47,7 +47,7 @@ export const searchResult = [
     title: "Calender",
     link: "/calendar",
     icon: "Calendar",
-    starred: true
+    starred: false
   },
   {
     id: 7,

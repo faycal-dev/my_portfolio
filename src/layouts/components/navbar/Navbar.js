@@ -9,7 +9,7 @@ import {
 } from "../../../redux/actions/auth/loginActions"
 import NavbarBookmarks from "./NavbarBookmarks"
 import NavbarUser from "./NavbarUser"
-import userImg from "../../../assets/img/portrait/small/avatar-s-11.jpg"
+import userImg from "../../../assets/img/portfolio/faycal.JPG"
 
 const UserName = props => {
   let username = ""
@@ -24,7 +24,7 @@ const UserName = props => {
       username = props.user.login.values.loggedInUser.name
     }
   } else {
-    username = "John Doe"
+    username = "Faycal El-mogherbi"
   }
 
   return username
@@ -81,7 +81,7 @@ const ThemeNavbar = props => {
               {props.horizontal ? (
                 <div className="logo d-flex align-items-center">
                   <div className="brand-logo mr-50"></div>
-                  <h2 className="text-primary brand-text mb-0">Vuexy</h2>
+                  <h2 className="text-primary brand-text mb-0">FM</h2>
                 </div>
               ) : null}
               <NavbarUser

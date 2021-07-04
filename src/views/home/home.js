@@ -1,138 +1,60 @@
 import React from "react";
-import { ShoppingBag } from "react-feather";
 import { Col, Row, Button } from "reactstrap";
 import { useTransition, animated, useSpring } from "react-spring";
 import Typewriter from "typewriter-effect";
-import StatisticsCard from "../../components/@vuexy/statisticsCard/StatisticsCard";
 import image from "../../assets/img/portfolio/image3.png";
 import { history } from "../../history";
 
 const Home = () => {
-  const [translate, settranslate] = React.useState([]);
   const [animate, setAnimate] = React.useState(false);
   const [start, setstart] = React.useState(false);
+
   React.useEffect(() => {
     setAnimate(true);
-    settranslate([
-      {
-        html: (
-          <Row className="d-flex justify-content-center">
-            <Col lg="2">
-              <StatisticsCard
-                hideChart
-                iconBg="warning"
-                icon={<ShoppingBag className="warning" size={22} />}
-                stat="978"
-                statTitle="Orders"
-              />
-            </Col>
-            <Col lg="2">
-              <StatisticsCard
-                hideChart
-                iconBg="warning"
-                icon={<ShoppingBag className="warning" size={22} />}
-                stat="978"
-                statTitle="Orders"
-              />
-            </Col>
-            <Col lg="2">
-              <StatisticsCard
-                hideChart
-                iconBg="warning"
-                icon={<ShoppingBag className="warning" size={22} />}
-                stat="978"
-                statTitle="Orders"
-              />
-            </Col>
-          </Row>
-        ),
-        delay: 1000,
-        x: 100,
-      },
-      {
-        html: (
-          <Row className="d-flex justify-content-center">
-            <Col lg="2">
-              <StatisticsCard
-                hideChart
-                iconBg="warning"
-                icon={<ShoppingBag className="warning" size={22} />}
-                stat="978"
-                statTitle="Orders"
-              />
-            </Col>
-            <Col lg="2">
-              <StatisticsCard
-                hideChart
-                iconBg="warning"
-                icon={<ShoppingBag className="warning" size={22} />}
-                stat="978"
-                statTitle="Orders"
-              />
-            </Col>
-            <Col lg="2">
-              <StatisticsCard
-                hideChart
-                iconBg="warning"
-                icon={<ShoppingBag className="warning" size={22} />}
-                stat="978"
-                statTitle="Orders"
-              />
-            </Col>
-          </Row>
-        ),
-        delay: 1200,
-        x: 100,
-      },
-    ]);
     setTimeout(() => {
       setstart(true);
     }, 1000);
   }, []);
 
   const transition1 = useTransition(animate, {
-    from: { opacity: 0 },
-    enter: { opacity: 1, delay: 900 },
+    from: { x: 300, y: 0, opacity: 0 },
+    enter: { x: 0, y: 0, opacity: 1, delay: 900 },
   });
   const transition3 = useSpring({
-    from: { opacity: .5 },
-    to: { opacity: 1, },
-    loop:{reverse: true },
-   
+    from: { opacity: 0.5 },
+    to: { opacity: 1 },
+    loop: { reverse: true },
   });
-
-  // const transition2 = useTransition(translate, {
-  //   from: { x: -300, y: 800, opacity: 0 },
-  //   enter: (item) => async (next) => {
-  //     await next({ y: 0, opacity: 1, delay: item.delay });
-  //     await next({ x: 0 });
-  //   },
-  //   // leave:{}
-  // });
+  const transition2 = useSpring({
+    from: { x: 0, y: -300, opacity: 0 },
+    to: { x: 0, y: 0, opacity: 1 },
+  });
+  const transition4 = useSpring({
+    from: { x: -300, opacity: 0 },
+    to: { x: 0, opacity: 1 },
+  });
 
   return (
     <div>
-      <Row
-      // style={{
-      //   height: window.innerHeight * 0.7,
-      // }}
-      >
+      <Row>
         <Col className="d-flex justify-content-end ">
           <div style={{ marginTop: "50px", marginLeft: "20px" }}>
-            <h4 style={{ opacity: 0.3 }}>{"<head>"}</h4>
-            <h1
-              style={{ fontFamily: "cursive" }}
-              className="font-bold font-large-3 ml-3"
-            >
-              Hi, i'm ELMOGHERBI <br />
-              FAYCAL
-            </h1>
-            <h4 style={{ opacity: 0.3 }}>{"</head>"}</h4>
-            <h4 style={{ opacity: 0.3 }} className="mt-3">
-              {"<body>"}
-            </h4>
-            <h3 style={{ fontFamily: "cursive" }} className="ml-3 ">
-              {start && (
+            <animated.div style={transition2}>
+              <h4 style={{ opacity: 0.3 }}>{"<head>"}</h4>
+              <h1
+                style={{ fontFamily: "cursive" }}
+                className="font-bold font-large-3 ml-3"
+              >
+                Hi, i'm ELMOGHERBI <br />
+                FAYCAL
+              </h1>
+              <h4 style={{ opacity: 0.3 }}>{"</head>"}</h4>
+            </animated.div>
+            <animated.div style={transition4}>
+              <h4 style={{ opacity: 0.3 }} className="mt-3">
+                {"<body>"}
+              </h4>
+              <h3 style={{ fontFamily: "cursive" }} className="ml-3 ">
                 <Typewriter
                   options={{
                     autoStart: true,
@@ -145,17 +67,23 @@ const Home = () => {
                     ],
                   }}
                 />
-              )}
-            </h3>
-            <h4 style={{ opacity: 0.3 }}>{"</body>"}</h4>
+              </h3>
+              <h4 style={{ opacity: 0.3 }}>{"</body>"}</h4>
+            </animated.div>
             <div style={{ marginTop: "80px" }} className=" ml-3 ">
-                  <animated.div style={transition3}>
-                    {" "}
-                    <Button.Ripple color="white" size="lg" outline  onClick={()=>{history.push("/contact")}}>
-                      Contact me !
-                    </Button.Ripple>
-                  </animated.div>
-               
+              <animated.div style={transition3}>
+                {" "}
+                <Button.Ripple
+                  color="white"
+                  size="lg"
+                  outline
+                  onClick={() => {
+                    history.push("/contact");
+                  }}
+                >
+                  Contact me !
+                </Button.Ripple>
+              </animated.div>
             </div>
           </div>
         </Col>
@@ -181,18 +109,6 @@ const Home = () => {
           )}
         </Col>
       </Row>
-
-      {/* <div
-        className="mt-3 pt-3"
-        style={{
-          height: window.innerHeight * 0.75,
-          width:"100%",
-        }}
-      >
-        {transition2((style, item) =>
-          item ? <animated.div style={style}>{item.html}</animated.div> : ""
-        )}
-      </div> */}
     </div>
   );
 };
