@@ -4,7 +4,8 @@ import { Col, Row, Button } from "reactstrap";
 import { useTransition, animated, useSpring } from "react-spring";
 import Typewriter from "typewriter-effect";
 import StatisticsCard from "../../components/@vuexy/statisticsCard/StatisticsCard";
-import image from "../../assets/img/home/image3.png";
+import image from "../../assets/img/portfolio/image3.png";
+import { history } from "../../history";
 
 const Home = () => {
   const [translate, settranslate] = React.useState([]);
@@ -150,7 +151,7 @@ const Home = () => {
             <div style={{ marginTop: "80px" }} className=" ml-3 ">
                   <animated.div style={transition3}>
                     {" "}
-                    <Button.Ripple color="white" size="lg" outline>
+                    <Button.Ripple color="white" size="lg" outline  onClick={()=>{history.push("/contact")}}>
                       Contact me !
                     </Button.Ripple>
                   </animated.div>
@@ -165,6 +166,7 @@ const Home = () => {
                 {" "}
                 <img
                   src={image}
+                  alt="img"
                   style={{
                     width: window.innerWidth * 0.3,
                     height: window.innerWidth * 0.3,

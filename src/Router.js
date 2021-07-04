@@ -10,6 +10,8 @@ import { ContextLayout } from "./utility/context/Layout"
 
 
 const home = lazy(() => import("./views/home/home"))
+const contact = lazy(() => import("./views/contact/contact"))
+
 
 // Route-based code splitting
 const analyticsDashboard = lazy(() =>
@@ -222,6 +224,7 @@ class AppRouter extends React.Component {
       <Router history={history}>
         <Switch>
         <AppRoute path="/home" component={home} />
+        <AppRoute path="/contact" component={contact} />
 
           <AppRoute exact path="/" component={analyticsDashboard} />
           <AppRoute
