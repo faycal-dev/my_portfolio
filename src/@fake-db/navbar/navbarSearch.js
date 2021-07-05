@@ -9,7 +9,7 @@ export const searchResult = [
         id: 1,
         target: "Home",
         title: "Home",
-        link: "/home",
+        link: "/",
         icon: "Home"
       },
       {
@@ -17,7 +17,14 @@ export const searchResult = [
         target: "Skills",
         title: "Skills",
         link: "/skills",
-        icon: "Home"
+        icon: "Layers"
+      },
+      {
+        id: 3,
+        target: "Projects",
+        title: "Projects",
+        link: "/projects",
+        icon: "Code"
       },
       // {
       //   id: 3,

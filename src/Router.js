@@ -12,6 +12,7 @@ import { ContextLayout } from "./utility/context/Layout"
 const home = lazy(() => import("./views/home/home"))
 const contact = lazy(() => import("./views/contact/contact"))
 const skills = lazy(() => import("./views/skils/skils"))
+const projects = lazy(() => import("./views/projects/Projects"))
 
 
 // Route-based code splitting
@@ -224,11 +225,12 @@ class AppRouter extends React.Component {
       // Set the directory path if you are deploying in sub-folder
       <Router history={history}>
         <Switch>
-        <AppRoute path="/home" component={home} />
+        <AppRoute exact path="/" component={home} />
         <AppRoute path="/contact" component={contact} />
         <AppRoute path="/skills" component={skills} />
+        <AppRoute path="/projects" component={projects} />
 
-          <AppRoute exact path="/" component={analyticsDashboard} />
+          <AppRoute path="/1" component={analyticsDashboard} />
           <AppRoute
             path="/ecommerce-dashboard"
             component={ecommerceDashboard}
