@@ -98,11 +98,14 @@ const Skils = () => {
 
   return (
     <div>
-      <Row className="d-flex justify-content-center" style={{marginTop:"-15px"}}>
+      <Row
+        className="d-flex justify-content-center"
+        style={{ marginTop: "-15px" }}
+      >
         <animated.div style={transition1}>
           <h2
             className="font-bold font-large-2"
-            style={{ fontFamily: "cursive" }}
+            style={{ fontFamily: "sans-serif" }}
           >
             My skills
           </h2>
@@ -110,31 +113,33 @@ const Skils = () => {
       </Row>
       <Row className="d-flex justify-content-center">
         <animated.div style={transition1}>
-          <div style={{ textAlign: "center" }}>
-            <h3
-              style={{
-                maxWidth: window.innerWidth * 0.4,
-                minWidth: "400px",
-                fontFamily: "cursive",
-                opacity: 0.7,
-                textAlignLast: "center",
-              }}
-            >
-              I'm intermediate developer with 2 years experience in front end
-              development (react js and react native)
-            </h3>
-            <p
-              style={{
-                maxWidth: window.innerWidth * 0.4,
-                minWidth: "400px",
-                fontFamily: "cursive",
-                opacity: 0.5,
-                textAlignLast: "center",
-              }}
-            >
-              I speak Arabic,english and french{" "}
-            </p>
-          </div>
+          <h3
+            style={{
+              maxWidth: window.innerWidth * 0.4,
+              minWidth: window.innerWidth < 400 ? "300px" : "400px",
+              fontFamily: "sans-serif",
+              opacity: 0.7,
+              textAlignLast: "center",
+            }}
+          >
+            I'm intermediate developer with 2 years experience in front end
+            development (react js and react native)
+          </h3>
+        </animated.div>
+      </Row>
+      <Row className="d-flex justify-content-center">
+        <animated.div style={transition1}>
+          <p
+            style={{
+              maxWidth: window.innerWidth * 0.4,
+              minWidth: window.innerWidth < 400 ? "300px" : "400px",
+              fontFamily: "sans-serif",
+              opacity: 0.5,
+              textAlignLast: "center",
+            }}
+          >
+            I speak Arabic,english and french{" "}
+          </p>
         </animated.div>
       </Row>
       <Row className="d-flex justify-content-center mb-2">
@@ -142,9 +147,9 @@ const Skils = () => {
           style={{
             height: "2px",
             width: window.innerWidth * 0.1,
-            minWidth:"140px",
+            minWidth: "140px",
             backgroundColor: "slateblue",
-            borderRadius:"2px"
+            borderRadius: "2px",
           }}
         />
       </Row>

@@ -78,7 +78,7 @@ class Contact extends React.Component {
         ) : (
           <div>
             <Row>
-              <Col>
+              <Col lg="6" sm="12">
                 <Label className="mb-50" for="Title">
                   Email title
                 </Label>
@@ -90,7 +90,7 @@ class Contact extends React.Component {
                   onChange={(e) => this.setState({ title: e.target.value })}
                 />
               </Col>
-              <Col>
+              <Col lg="6" sm="12">
                 <Label className="mb-50" for="Email">
                   Your Email address
                 </Label>

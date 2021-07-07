@@ -66,7 +66,7 @@ const Projects = () => {
   });
   return (
     <Row>
-      <Col md="6" sm="12" className="mb-2  mt-3">
+      <Col md="6" sm="12" className="mb-2">
         <animated.div style={animation1}>
           <Project
             params={{
@@ -91,7 +91,7 @@ const Projects = () => {
           />
         </animated.div>
       </Col>
-      <Col md="6" sm="12" className="mb-2 mt-3">
+      <Col md="6" sm="12" className="mb-2 ">
         <animated.div className="h-100" style={animation2}>
           <Card
             style={{ height: "100%" }}
@@ -101,7 +101,7 @@ const Projects = () => {
               className="mt-3"
               style={{
                 alignSelf: "center",
-                fontFamily: "cursive",
+                fontFamily: "sans-serif",
                 fontSize: "35px",
               }}
             >
@@ -111,7 +111,7 @@ const Projects = () => {
               className="mt-2"
               style={{
                 textAlignLast: "center",
-                fontFamily: "cursive",
+                fontFamily: "sans-serif",
                 opacity: 0.6,
               }}
             >
@@ -135,7 +135,7 @@ const Projects = () => {
               className="mt-3"
               style={{
                 alignSelf: "center",
-                fontFamily: "cursive",
+                fontFamily: "sans-serif",
                 fontSize: "35px",
               }}
             >
@@ -145,7 +145,7 @@ const Projects = () => {
               className="mt-2"
               style={{
                 textAlignLast: "center",
-                fontFamily: "cursive",
+                fontFamily: "sans-serif",
                 opacity: 0.6,
               }}
             >

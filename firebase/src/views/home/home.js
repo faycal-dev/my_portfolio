@@ -33,18 +33,20 @@ const Home = () => {
     from: { x: -300, opacity: 0 },
     to: { x: 0, opacity: 1 },
   });
-
+  let font = "";
+  if (window.innerWidth < 450) {
+    font = "font-bold font-large-1 ml-3";
+  } else {
+    font = "font-bold font-large-3 ml-3 ";
+  }
   return (
     <div>
       <Row>
         <Col className="d-flex justify-content-end ">
-          <div style={{ marginTop: "50px", marginLeft: "20px" }}>
+          <div className="text-wrap">
             <animated.div style={transition2}>
               <h4 style={{ opacity: 0.3 }}>{"<head>"}</h4>
-              <h1
-                style={{ fontFamily: "cursive" }}
-                className="font-bold font-large-3 ml-3"
-              >
+              <h1 style={{ fontFamily: "sans-serif" }} className={font}>
                 Hi, i'm ELMOGHERBI <br />
                 FAYCAL
               </h1>
@@ -54,7 +56,7 @@ const Home = () => {
               <h4 style={{ opacity: 0.3 }} className="mt-3">
                 {"<body>"}
               </h4>
-              <h3 style={{ fontFamily: "cursive" }} className="ml-3 ">
+              <h3 style={{ fontFamily: "sans-serif" }} className="ml-3 ">
                 <Typewriter
                   options={{
                     autoStart: true,
@@ -70,7 +72,7 @@ const Home = () => {
               </h3>
               <h4 style={{ opacity: 0.3 }}>{"</body>"}</h4>
             </animated.div>
-            <div style={{ marginTop: "80px" }} className=" ml-3 ">
+            <div style={{ marginTop: "80px" }} >
               <animated.div style={transition3}>
                 {" "}
                 <Button.Ripple

@@ -25,14 +25,14 @@ export const searchResult = [
     icon: "Code",
     starred: false
   },
-  // {
-  //   id: 4,
-  //   target: "Chat",
-  //   title: "Chat",
-  //   link: "/chat",
-  //   icon: "MessageSquare",
-  //   starred: true
-  // },
+  {
+    id: 4,
+    target: "Contact",
+    title: "Contact",
+    link: "/contact",
+    icon: "MessageSquare",
+    starred: true
+  },
   // {
   //   id: 5,
   //   target: "Send",
