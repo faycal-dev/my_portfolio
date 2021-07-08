@@ -7,8 +7,7 @@ import {
   Code,
   GitHub,
   Linkedin,
-  Youtube,
-  Instagram,
+  Mail,
   Award,
   Clock,
   Shield,
@@ -16,13 +15,11 @@ import {
 } from "react-feather";
 import Swiper from "react-id-swiper";
 import macbook from "../../../../assets/img/portfolio/faycal1.jpg";
-import headphones from "../../../../assets/img/elements/beats-headphones.png";
-import laptop from "../../../../assets/img/elements/macbook-pro.png";
-import homepod from "../../../../assets/img/elements/homepod.png";
-import earphones from "../../../../assets/img/elements/wireless-earphones.png";
-import iphoneX from "../../../../assets/img/elements/iphone-x.png";
-import watch from "../../../../assets/img/elements/apple-watch.png";
-import mouse from "../../../../assets/img/elements/magic-mouse.png";
+import back from "../../../../assets/img/portfolio/back.png";
+import front from "../../../../assets/img/portfolio/front.png";
+import mobile from "../../../../assets/img/portfolio/mobile.png";
+import website from "../../../../assets/img/portfolio/website.png";
+import full from "../../../../assets/img/portfolio/web_mobile.png";
 import "swiper/css/swiper.css";
 import "../../../../assets/scss/pages/app-ecommerce-shop.scss";
 import { history } from "../../../../history";
@@ -107,6 +104,12 @@ class DetailPage extends React.Component {
                 </p>
                 <ul className="list-unstyled">
                   <li className="mb-50">
+                    <Mail size={15} />
+                    <span className="align-middle font-weight-bold ml-50">
+                      M.elmogherbi@esi-sba.dz
+                    </span>
+                  </li>
+                  <li className="mb-50">
                     <MapPin size={15} />
                     <span className="align-middle font-weight-bold ml-50">
                       Oran Algeria
@@ -168,7 +171,7 @@ class DetailPage extends React.Component {
                       history.push("/projects");
                     }}
                     className="mb-1"
-                    color="warning"
+                    color="primary"
                     outline
                   >
                     <Code size={15} />
@@ -185,27 +188,15 @@ class DetailPage extends React.Component {
                       <GitHub size={15} />
                     </Button.Ripple>
                   </a>
-                  <Button.Ripple
-                    className="mr-1 btn-icon rounded-circle"
-                    color="info"
-                    outline
-                  >
-                    <Linkedin size={15} />
-                  </Button.Ripple>
-                  <Button.Ripple
-                    className="mr-1 btn-icon rounded-circle"
-                    color="danger"
-                    outline
-                  >
-                    <Youtube size={15} />
-                  </Button.Ripple>
-                  <Button.Ripple
-                    className="btn-icon rounded-circle"
-                    color="primary"
-                    outline
-                  >
-                    <Instagram size={15} />
-                  </Button.Ripple>
+                  <a href="https://www.linkedin.com/in/el-mogherbi-mohammed-faycal-7b67971b8/">
+                    <Button.Ripple
+                      className="mr-1 btn-icon rounded-circle"
+                      color="info"
+                      outline
+                    >
+                      <Linkedin size={15} />
+                    </Button.Ripple>
+                  </a>
                 </div>
               </Col>
             </Row>
@@ -219,27 +210,25 @@ class DetailPage extends React.Component {
                     <p className="font-medium-2 text-bold-600 mb-0">
                       100% Original
                     </p>
-                    <p>
-                      Chocolate bar candy canes ice cream toffee cookie halvah.
-                    </p>
+                    <p>All written code is original and made by me.</p>
                   </div>
                 </Col>
                 <Col className="text-center" md="4" sm="12">
                   <div className="w-50 mx-auto">
                     <Clock className="text-primary mb-1" size={42} />
                     <p className="font-medium-2 text-bold-600 mb-0">
-                      10 Day Replacement
+                      Time limits
                     </p>
-                    <p>Marshmallow biscuit donut dragée fruitcake wafer.</p>
+                    <p>The time limits must always be respected.</p>
                   </div>
                 </Col>
                 <Col className="text-center" md="4" sm="12">
                   <div className="w-50 mx-auto">
                     <Shield className="text-primary mb-1" size={42} />
                     <p className="font-medium-2 text-bold-600 mb-0">
-                      1 Year Warranty
+                      Confidentiality
                     </p>
-                    <p>Cotton candy gingerbread cake I love sugar sweet.</p>
+                    <p>All sensitive data are kept in secret and encrytpted.</p>
                   </div>
                 </Col>
               </Row>
@@ -249,20 +238,19 @@ class DetailPage extends React.Component {
             <Row>
               <Col className="details-page-swiper text-center mt-5" sm="12">
                 <div className="heading-section mb-3">
-                  <h2 className="text-uppercase mb-50">Related Products</h2>
-                  <p>People also search for this items</p>
+                  <h2 className="text-uppercase mb-50">my services</h2>
+                  <p>The products i can deliver with best quality for you</p>
                 </div>
                 <Swiper {...swiperParams}>
                   <div>
                     <div className="title mb-1">
                       <p className="font-medium-1 text-bold-600 truncate mb-0">
-                        Beats by Dr. Dre - Powerbeats2 Wireless Earbud
-                        Headphones - Black/Red
+                        Front end development of responsive intefaces 
                       </p>
-                      <small>By Dr. Dre</small>
+                      <small>React js</small>
                     </div>
-                    <div className="img-container">
-                      <img src={watch} alt="watch" />
+                    <div >
+                      <img height="150px" width="150px" src={front} alt="front" />
                     </div>
                     <div className="ratings  ml-1">
                       <Star size={15} fill="#ff9f43" stroke="#ff9f43" />
@@ -271,20 +259,16 @@ class DetailPage extends React.Component {
                       <Star size={15} fill="#ff9f43" stroke="#ff9f43" />
                       <Star size={15} fill="#fff" stroke="#b8c2cc" />
                     </div>
-                    <p className="text-bold-500 font-medium-2 text-primary mt-50">
-                      $129
-                    </p>
                   </div>
                   <div>
                     <div className="title mb-1">
                       <p className="font-medium-1 text-bold-600 truncate mb-0">
-                        Apple - Apple Watch Nike+ 42mm Silver Aluminum Case
-                        Silver/Volt Nike Sport Band - Silver Aluminum
+                        Cross platform mobile app
                       </p>
-                      <small>By Apple</small>
+                      <small>React native</small>
                     </div>
-                    <div className="img-container">
-                      <img src={earphones} alt="earphones" />
+                    <div>
+                      <img height="150px" width="150px" src={mobile} alt="mobile" />
                     </div>
                     <div className="ratings  ml-1">
                       <Star size={15} fill="#ff9f43" stroke="#ff9f43" />
@@ -293,19 +277,16 @@ class DetailPage extends React.Component {
                       <Star size={15} fill="#ff9f43" stroke="#ff9f43" />
                       <Star size={15} fill="#fff" stroke="#b8c2cc" />
                     </div>
-                    <p className="text-bold-500 font-medium-2 text-primary mt-50">
-                      $399
-                    </p>
                   </div>
                   <div>
                     <div className="title mb-1">
                       <p className="font-medium-1 text-bold-600 truncate mb-0">
-                        Google - Google Home - White/Slate fabric
+                        Web site developement
                       </p>
-                      <small>By Google</small>
+                      <small>React js, Django</small>
                     </div>
-                    <div className="img-container">
-                      <img src={laptop} alt="laptop" />
+                    <div >
+                      <img height="150px" width="150px" src={website} alt="web" />
                     </div>
                     <div className="ratings  ml-1">
                       <Star size={15} fill="#ff9f43" stroke="#ff9f43" />
@@ -314,40 +295,34 @@ class DetailPage extends React.Component {
                       <Star size={15} fill="#ff9f43" stroke="#ff9f43" />
                       <Star size={15} fill="#fff" stroke="#b8c2cc" />
                     </div>
-                    <p className="text-bold-500 font-medium-2 text-primary mt-50">
-                      $1999.99
-                    </p>
                   </div>
                   <div>
                     <div className="title mb-1">
                       <p className="font-medium-1 text-bold-600 truncate mb-0">
-                        Amazon - Fire TV Stick with Alexa Voice Remote - Black
+                        back end development and data base structure
                       </p>
-                      <small>By Amazon</small>
+                      <small>Django, mySQL</small>
                     </div>
-                    <div className="img-container">
-                      <img src={homepod} alt="homepod" />
+                    <div >
+                      <img src={back} alt="back" height="150px" width="150px" />
                     </div>
                     <div className="ratings  ml-1">
                       <Star size={15} fill="#ff9f43" stroke="#ff9f43" />
                       <Star size={15} fill="#ff9f43" stroke="#ff9f43" />
                       <Star size={15} fill="#ff9f43" stroke="#ff9f43" />
-                      <Star size={15} fill="#ff9f43" stroke="#ff9f43" />
+                      <Star size={15} fill="#fff" stroke="#b8c2cc" />
                       <Star size={15} fill="#fff" stroke="#b8c2cc" />
                     </div>
-                    <p className="text-bold-500 font-medium-2 text-primary mt-50">
-                      $39.99
-                    </p>
                   </div>
                   <div>
                     <div className="title mb-1">
                       <p className="font-medium-1 text-bold-600 truncate mb-0">
-                        Google - Chromecast Ultra - Black
+                        Full stack app (web and mobile app using the same back end)
                       </p>
-                      <small>By Google</small>
+                      <small>React js, native ,Django, mySQL</small>
                     </div>
-                    <div className="img-container">
-                      <img src={iphoneX} alt="homepod" />
+                    <div>
+                      <img src={full} alt="full" height="150px" width="150px" />
                     </div>
                     <div className="ratings  ml-1">
                       <Star size={15} fill="#ff9f43" stroke="#ff9f43" />
@@ -356,52 +331,6 @@ class DetailPage extends React.Component {
                       <Star size={15} fill="#ff9f43" stroke="#ff9f43" />
                       <Star size={15} fill="#fff" stroke="#b8c2cc" />
                     </div>
-                    <p className="text-bold-500 font-medium-2 text-primary mt-50">
-                      $69.99
-                    </p>
-                  </div>
-                  <div>
-                    <div className="title mb-1">
-                      <p className="font-medium-1 text-bold-600 truncate mb-0">
-                        Beats by Dr. Dre - Beats EP Headphones - White
-                      </p>
-                      <small>Beats by Dr. Dre</small>
-                    </div>
-                    <div className="img-container">
-                      <img src={headphones} alt="homepod" />
-                    </div>
-                    <div className="ratings  ml-1">
-                      <Star size={15} fill="#ff9f43" stroke="#ff9f43" />
-                      <Star size={15} fill="#ff9f43" stroke="#ff9f43" />
-                      <Star size={15} fill="#ff9f43" stroke="#ff9f43" />
-                      <Star size={15} fill="#ff9f43" stroke="#ff9f43" />
-                      <Star size={15} fill="#fff" stroke="#b8c2cc" />
-                    </div>
-                    <p className="text-bold-500 font-medium-2 text-primary mt-50">
-                      $129.99
-                    </p>
-                  </div>
-                  <div>
-                    <div className="title mb-1">
-                      <p className="font-medium-1 text-bold-600 truncate mb-0">
-                        LG - 40" Class (39.5" Diag.) - LED - 1080p - HDTV -
-                        Black
-                      </p>
-                      <small>by LG</small>
-                    </div>
-                    <div className="img-container">
-                      <img src={mouse} alt="homepod" />
-                    </div>
-                    <div className="ratings  ml-1">
-                      <Star size={15} fill="#ff9f43" stroke="#ff9f43" />
-                      <Star size={15} fill="#ff9f43" stroke="#ff9f43" />
-                      <Star size={15} fill="#ff9f43" stroke="#ff9f43" />
-                      <Star size={15} fill="#ff9f43" stroke="#ff9f43" />
-                      <Star size={15} fill="#fff" stroke="#b8c2cc" />
-                    </div>
-                    <p className="text-bold-500 font-medium-2 text-primary mt-50">
-                      $279.99
-                    </p>
                   </div>
                 </Swiper>
               </Col>
