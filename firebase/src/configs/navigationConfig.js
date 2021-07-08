@@ -22,6 +22,13 @@ const navigationConfig = [
     type: "item",
     navLink: "/projects",
   },
+  {
+    id: "About me",
+    title: "About me",
+    icon: <Icon.User size={16} />,
+    type: "item",
+    navLink: "/about-me"
+  },
   // {
   //   id: "dashboard",
   //   title: "Dashboard",

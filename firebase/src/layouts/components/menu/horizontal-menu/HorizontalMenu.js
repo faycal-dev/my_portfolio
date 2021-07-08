@@ -325,10 +325,10 @@ class HorizontalSidebar extends React.Component {
 
   render() {
     return (
-      <div className="horizontal-menu-wrapper">
+      <div className="horizontal-menu-wrapper ">
         <div
           className={classnames(
-            "header-navbar navbar-expand-sm navbar navbar-horizontal navbar-shadow",
+            "header-navbar navbar-expand-sm navbar navbar-horizontal navbar-shadow ",
             {
               "navbar-static": this.props.navbarType === "static",
               "fixed-top": this.props.navbarType === "sticky",

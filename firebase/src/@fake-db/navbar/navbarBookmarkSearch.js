@@ -33,21 +33,21 @@ export const searchResult = [
     icon: "MessageSquare",
     starred: true
   },
-  // {
+  {
+    id: 5,
+    target: "About me",
+    title: "About me",
+    link: "/about-me",
+    icon: "User",
+    starred: false
+  },
+    // {
   //   id: 5,
   //   target: "Send",
   //   title: "Send message",
   //   link: "/contact",
   //   icon: "Mail",
   //   starred: true
-  // },
-  // {
-  //   id: 6,
-  //   target: "Calender",
-  //   title: "Calender",
-  //   link: "/calendar",
-  //   icon: "Calendar",
-  //   starred: false
   // },
   // {
   //   id: 7,

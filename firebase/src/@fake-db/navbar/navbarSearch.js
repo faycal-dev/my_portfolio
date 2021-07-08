@@ -26,6 +26,20 @@ export const searchResult = [
         link: "/projects",
         icon: "Code"
       },
+      {
+        id: 4,
+        target: "Contact",
+        title: "Contact",
+        link: "/contact",
+        icon: "MessageSquare",
+      },
+      {
+        id: 5,
+        target: "About me",
+        title: "About me",
+        link: "/about-me",
+        icon: "User",
+      },
       // {
       //   id: 3,
       //   target: "Todo",

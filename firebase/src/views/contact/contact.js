@@ -29,7 +29,7 @@ class Contact extends React.Component {
     if (
       emailRegex.test(this.state.email.toLowerCase()) &&
       this.state.message.trim() !== "" &&
-      this.state.title.trim() !==""
+      this.state.title.trim() !== ""
     ) {
       this.setState({ isLoading: true });
       emailjs
@@ -105,22 +105,15 @@ class Contact extends React.Component {
             </Row>
             <Row className="mt-3 mb-3">
               <Col>
-                <Editor
+                <Label className="mb-50" for="Email">
+                  Your message
+                </Label>
+                <Input
+                  type="textarea"
+                  rows={window.innerWidth < 500 ? "3" : "8"}
+                  value={this.state.message}
                   onChange={(e) => {
-                    this.setState({ message: e.blocks[0].text });
-                  }}
-                  placeholder="Your message ..."
-                  wrapperClassName="demo-wrapper"
-                  editorClassName="demo-editor"
-                  defaultEditorState={this.state.editorState}
-                  toolbar={{
-                    options: ["inline", "fontSize", "textAlign"],
-                    inline: {
-                      options: ["bold", "italic", "underline"],
-                      bold: { className: "bordered-option-classname" },
-                      italic: { className: "bordered-option-classname" },
-                      underline: { className: "bordered-option-classname" },
-                    },
+                    this.setState({ message: e.target.value });
                   }}
                 />
               </Col>
@@ -129,11 +122,11 @@ class Contact extends React.Component {
               <Col>
                 <Button.Ripple
                   color="white"
-                  size="lg"
+                  size={window.innerWidth < 550 ? "md" : "lg"}
                   outline
                   onClick={this.handleSend}
                 >
-                  <Send size={22} /> Send Email !
+                  <Send size={window.innerWidth < 550 ? 18 : 22} /> Send Email !
                 </Button.Ripple>
               </Col>
             </Row>

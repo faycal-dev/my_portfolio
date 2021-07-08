@@ -62,7 +62,7 @@ const Skils = () => {
                 iconBg="primary"
                 icon={<img src={python} height="40px" width="40px" />}
                 stat="PYTHON"
-                statTitle="Django, TensorFlow, Sklearn, Numpy, Pandas"
+                statTitle="Django, TensorFlow, Keras, Sklearn, Numpy, Pandas"
               />
             </Col>
             <Col lg="2">
@@ -72,7 +72,7 @@ const Skils = () => {
                 iconBg="primary"
                 icon={<img src={django} height="50px" width="50px" />}
                 stat="DJANGO"
-                statTitle="Views, Urls, endpoints, Databases, HTTP requests"
+                statTitle="Views, endpoints, Urls, Databases, HTTP requests"
               />
             </Col>
           </Row>

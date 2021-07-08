@@ -1,7 +1,7 @@
 import React from "react";
 import Project from "./Project";
 import { Card, Row, Col } from "reactstrap";
-import { useTransition, animated, useSpring } from "react-spring";
+import { animated, useSpring } from "react-spring";
 import "swiper/css/swiper.css";
 import "../../assets/scss/plugins/extensions/swiper.scss";
 
@@ -27,6 +27,11 @@ import img6 from "../../assets/img/portfolio/captureMadina_tic/maire_home.png";
 import img7 from "../../assets/img/portfolio/captureMadina_tic/mes_signalements.png";
 import img8 from "../../assets/img/portfolio/captureMadina_tic/profile.png";
 import img9 from "../../assets/img/portfolio/captureMadina_tic/service.png";
+import greanit1 from "../../assets/img/portfolio/greanIt/greanIt1.PNG";
+import greanit2 from "../../assets/img/portfolio/greanIt/greanIt2.PNG";
+import greanit3 from "../../assets/img/portfolio/greanIt/greanIt3.PNG";
+import greanit4 from "../../assets/img/portfolio/greanIt/greanIt4.PNG";
+import greanit5 from "../../assets/img/portfolio/greanIt/greanIt5.PNG";
 
 const Projects = () => {
   const images = [
@@ -45,6 +50,7 @@ const Projects = () => {
     Capture14,
   ];
   const imagesMadina = [img1, img2, img3, img4, img5, img6, img7, img8, img9];
+  const imagesGreanit = [greanit1, greanit2, greanit3, greanit4, greanit5];
 
   const animation1 = useSpring({
     from: { opacity: 0, x: -200 },
@@ -57,12 +63,12 @@ const Projects = () => {
   const animation3 = useSpring({
     from: { opacity: 0, x: -200 },
     to: { opacity: 1, x: 0 },
-    delay:400
+    delay: 400,
   });
   const animation4 = useSpring({
     from: { opacity: 0, x: 200 },
     to: { opacity: 1, x: 0 },
-    delay:400
+    delay: 400,
   });
   return (
     <Row>
@@ -179,6 +185,72 @@ const Projects = () => {
             }}
             images={imagesMadina}
           />
+        </animated.div>
+      </Col>
+      <Col md="6" sm="12" className="mb-2">
+        <animated.div style={animation1}>
+          <Project
+            params={{
+              slidesPerView: 5,
+              spaceBetween: 50,
+              pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+              },
+              breakpoints: {
+                1024: {
+                  slidesPerView: 4,
+                  spaceBetween: 40,
+                },
+                768: {
+                  slidesPerView: 3,
+                  spaceBetween: 30,
+                },
+                640: {
+                  slidesPerView: 2,
+                  spaceBetween: 20,
+                },
+                320: {
+                  slidesPerView: 1,
+                  spaceBetween: 10,
+                },
+              },
+            }}
+            images={imagesGreanit}
+          />
+        </animated.div>
+      </Col>
+      <Col md="6" sm="12" className="mb-2 ">
+        <animated.div className="h-100" style={animation2}>
+          <Card
+            style={{ height: "100%" }}
+            className="d-flex justify-content-start p-2"
+          >
+            <h2
+              className="mt-3"
+              style={{
+                alignSelf: "center",
+                fontFamily: "sans-serif",
+                fontSize: "35px",
+              }}
+            >
+              GreanIt app
+            </h2>
+            <h4
+              className="mt-2"
+              style={{
+                textAlignLast: "center",
+                fontFamily: "sans-serif",
+                opacity: 0.6,
+              }}
+            >
+              This is a cross platform mobile app for smart irrigation
+              monitoring, it was developed with REACT NATIVE for the front end
+              and Firebase for the back end, i used react navigation V5 and the
+              animated api for some animations. The designe is fully responsive
+              with all devices.
+            </h4>
+          </Card>
         </animated.div>
       </Col>
     </Row>

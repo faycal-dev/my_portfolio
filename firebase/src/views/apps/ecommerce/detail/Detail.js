@@ -1,78 +1,72 @@
-import React from "react"
-import { Card, CardBody, Row, Col, Button } from "reactstrap"
+import React from "react";
+import { Card, CardBody, Row, Col, Button } from "reactstrap";
 import {
   Star,
-  Truck,
-  DollarSign,
-  ShoppingCart,
-  Heart,
-  Facebook,
-  Twitter,
+  MapPin,
+  Home,
+  Code,
+  GitHub,
+  Linkedin,
   Youtube,
   Instagram,
   Award,
   Clock,
-  Shield
-} from "react-feather"
-import Breacrumbs from "../../../../components/@vuexy/breadCrumbs/BreadCrumb"
-import classnames from "classnames"
-import Swiper from "react-id-swiper"
-import macbook from "../../../../assets/img/elements/macbook-pro.png"
-import headphones from "../../../../assets/img/elements/beats-headphones.png"
-import laptop from "../../../../assets/img/elements/macbook-pro.png"
-import homepod from "../../../../assets/img/elements/homepod.png"
-import earphones from "../../../../assets/img/elements/wireless-earphones.png"
-import iphoneX from "../../../../assets/img/elements/iphone-x.png"
-import watch from "../../../../assets/img/elements/apple-watch.png"
-import mouse from "../../../../assets/img/elements/magic-mouse.png"
-import "swiper/css/swiper.css"
-import "../../../../assets/scss/pages/app-ecommerce-shop.scss"
+  Shield,
+  Send,
+} from "react-feather";
+import Swiper from "react-id-swiper";
+import macbook from "../../../../assets/img/portfolio/faycal1.jpg";
+import headphones from "../../../../assets/img/elements/beats-headphones.png";
+import laptop from "../../../../assets/img/elements/macbook-pro.png";
+import homepod from "../../../../assets/img/elements/homepod.png";
+import earphones from "../../../../assets/img/elements/wireless-earphones.png";
+import iphoneX from "../../../../assets/img/elements/iphone-x.png";
+import watch from "../../../../assets/img/elements/apple-watch.png";
+import mouse from "../../../../assets/img/elements/magic-mouse.png";
+import "swiper/css/swiper.css";
+import "../../../../assets/scss/pages/app-ecommerce-shop.scss";
+import { history } from "../../../../history";
 
 const swiperParams = {
   navigation: {
     nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev"
+    prevEl: ".swiper-button-prev",
   },
   breakpoints: {
     1600: {
       slidesPerView: 5,
-      spaceBetween: 55
+      spaceBetween: 55,
     },
     1300: {
       slidesPerView: 4,
-      spaceBetween: 55
+      spaceBetween: 55,
     },
     1260: {
       slidesPerView: 3,
-      spaceBetween: 55
+      spaceBetween: 55,
     },
     900: {
       slidesPerView: 3,
-      spaceBetween: 55
+      spaceBetween: 55,
     },
     768: {
       slidesPerView: 2,
-      spaceBetween: 55
+      spaceBetween: 55,
     },
     375: {
       slidesPerView: 1,
-      spaceBetween: 55
-    }
-  }
-}
+      spaceBetween: 55,
+    },
+  },
+};
 class DetailPage extends React.Component {
   state = {
-    selectedColor: 1
-  }
-  toggleSelectedColor = color => this.setState({ selectedColor: color })
+    selectedColor: 1,
+  };
+  toggleSelectedColor = (color) => this.setState({ selectedColor: color });
   render() {
     return (
       <React.Fragment>
-        <Breacrumbs
-          breadCrumbTitle="Product Detail"
-          breadCrumbParent="eCommerce"
-          breadCrumbActive="Product Detail"
-        />
         <Card className="overflow-hidden app-ecommerce-details">
           <CardBody className="pb-0">
             <Row className="mb-5 mt-2">
@@ -81,139 +75,122 @@ class DetailPage extends React.Component {
                 sm="12"
                 md="5"
               >
-                <img src={macbook} alt="Google Home" height="250" width="250" />
+                <img
+                  src={macbook}
+                  alt="my photo"
+                  style={{
+                    borderRadius: 15,
+                    minHeight: "250px",
+                    minWidth: "200px",
+                  }}
+                  height={window.innerWidth * 0.29}
+                  width={window.innerWidth * 0.2}
+                />
               </Col>
               <Col md="7" sm="12">
-                <h3>Google - Google Home - White/Slate fabric</h3>
-                <p className="text-muted">by Google</p>
+                <h3>El-Mogherbi Mohammed Fayçal</h3>
+                <p className="text-muted">Student and freelancer</p>
                 <div className="d-flex flex-wrap">
-                  <h3 className="text-primary">$129</h3>
+                  <h3 className="text-primary">Web and mobile developer</h3>
                   <div className="ratings border-left ml-1 pl-1">
-                    <Star size={20} fill="#ff9f43" stroke="#ff9f43" />
-                    <Star size={20} fill="#ff9f43" stroke="#ff9f43" />
-                    <Star size={20} fill="#ff9f43" stroke="#ff9f43" />
-                    <Star size={20} fill="#ff9f43" stroke="#ff9f43" />
-                    <Star size={20} fill="#fff" stroke="#b8c2cc" />
                     <span className="ml-1 font-medium-1 text-dark align-middle">
-                      424 Ratings
+                      Computer science student
                     </span>
                   </div>
                 </div>
                 <hr />
                 <p>
-                  Simplify your everyday life with the Google Home, a
-                  voice-activated speaker powered by the Google Assistant. Use
-                  voice commands to enjoy music, get answers from Google and
-                  manage everyday tasks. Google Home is compatible with Android
-                  and iOS operating systems, and can control compatible smart
-                  devices such as Chromecast or Nest.
+                  Hi i'm Fayçal and i am a student in the last year of my
+                  ingineering degree in computer science, I love coding, solving
+                  problemes and learning new technologies. Feel free to take a
+                  look at my latest project HOPE YOU LIKE IT.
                 </p>
                 <ul className="list-unstyled">
                   <li className="mb-50">
-                    <Truck size={15} />
+                    <MapPin size={15} />
                     <span className="align-middle font-weight-bold ml-50">
-                      Free Sheeping
+                      Oran Algeria
                     </span>
                   </li>
                   <li>
-                    <DollarSign size={15} />
+                    <Home size={15} />
                     <span className="align-middle font-weight-bold ml-50">
-                      EMI options available
+                      School : Higher national school of computer science, Sidi
+                      Bel Abbes (ESI SBA)
                     </span>
                   </li>
                 </ul>
                 <hr />
-                <h4>Colors</h4>
-                <div
-                  className={classnames(
-                    "color-radio color-radio-primary mr-50",
-                    {
-                      selected: this.state.selectedColor === 1
-                    }
-                  )}
-                  onClick={() => this.toggleSelectedColor(1)}
-                >
-                  <div className="radio-content"></div>
+                <h4>Skills</h4>
+                <div className="d-flex flex-wrap">
+                  <p className="mr-2">Front end development</p>
+                  <Star size={20} fill="#ff9f43" stroke="#ff9f43" />
+                  <Star size={20} fill="#ff9f43" stroke="#ff9f43" />
+                  <Star size={20} fill="#ff9f43" stroke="#ff9f43" />
+                  <Star size={20} fill="#ff9f43" stroke="#ff9f43" />
+                  <Star size={20} fill="#fff" stroke="#b8c2cc" />
                 </div>
-                <div
-                  className={classnames(
-                    "color-radio color-radio-success mr-50",
-                    {
-                      selected: this.state.selectedColor === 2
-                    }
-                  )}
-                  onClick={() => this.toggleSelectedColor(2)}
-                >
-                  <div className="radio-content"></div>
+                <div className="d-flex flex-wrap">
+                  <p className="mr-2">Back end development</p>
+                  <Star size={20} fill="#ff9f43" stroke="#ff9f43" />
+                  <Star size={20} fill="#ff9f43" stroke="#ff9f43" />
+                  <Star size={20} fill="#ff9f43" stroke="#ff9f43" />
+                  <Star size={20} fill="#fff" stroke="#b8c2cc" />
+                  <Star size={20} fill="#fff" stroke="#b8c2cc" />
                 </div>
-                <div
-                  className={classnames(
-                    "color-radio color-radio-danger mr-50",
-                    {
-                      selected: this.state.selectedColor === 3
-                    }
-                  )}
-                  onClick={() => this.toggleSelectedColor(3)}
-                >
-                  <div className="radio-content"></div>
-                </div>
-                <div
-                  className={classnames("color-radio color-radio-info mr-50", {
-                    selected: this.state.selectedColor === 4
-                  })}
-                  onClick={() => this.toggleSelectedColor(4)}
-                >
-                  <div className="radio-content"></div>
-                </div>
-                <div
-                  className={classnames(
-                    "color-radio color-radio-warning mr-50",
-                    {
-                      selected: this.state.selectedColor === 5
-                    }
-                  )}
-                  onClick={() => this.toggleSelectedColor(5)}
-                >
-                  <div className="radio-content"></div>
-                </div>
-                <div
-                  className={classnames("color-radio color-radio-dark", {
-                    selected: this.state.selectedColor === 6
-                  })}
-                  onClick={() => this.toggleSelectedColor(6)}
-                >
-                  <div className="radio-content"></div>
+                <div className="d-flex flex-wrap">
+                  <p className="mr-2">Mobile development</p>
+                  <Star size={20} fill="#ff9f43" stroke="#ff9f43" />
+                  <Star size={20} fill="#ff9f43" stroke="#ff9f43" />
+                  <Star size={20} fill="#ff9f43" stroke="#ff9f43" />
+                  <Star size={20} fill="#ff9f43" stroke="#ff9f43" />
+                  <Star size={20} fill="#fff" stroke="#b8c2cc" />
                 </div>
                 <hr />
                 <p className="my-50">
                   <span>Available</span>
                   <span className="mx-50">-</span>
-                  <span className="text-success">In Stock</span>
+                  <span className="text-success">Ready to work</span>
                 </p>
                 <div className="action-btns">
-                  <Button.Ripple className="mr-1 mb-1" color="primary">
-                    <ShoppingCart size={15} />
-                    <span className="align-middle ml-50">ADD TO CART</span>
+                  <Button.Ripple
+                    onClick={() => {
+                      history.push("/contact");
+                    }}
+                    className="mr-1 mb-1"
+                    color="primary"
+                  >
+                    <Send size={15} />
+                    <span className="align-middle ml-50">Contact me</span>
                   </Button.Ripple>
-                  <Button.Ripple className="mb-1" color="danger" outline>
-                    <Heart size={15} />
-                    <span className="align-middle ml-50">WISHLIST</span>
+                  <Button.Ripple
+                    onClick={() => {
+                      history.push("/projects");
+                    }}
+                    className="mb-1"
+                    color="warning"
+                    outline
+                  >
+                    <Code size={15} />
+                    <span className="align-middle ml-50">My projects</span>
                   </Button.Ripple>
                 </div>
                 <div className="d-flex flex-wrap social-media-btns">
-                  <Button.Ripple
-                    className="mr-1 btn-icon rounded-circle"
-                    color="primary"
-                    outline
-                  >
-                    <Facebook size={15} />
-                  </Button.Ripple>
+                  <a href="https://github.com/faycal-dev">
+                    <Button.Ripple
+                      className="mr-1 btn-icon rounded-circle"
+                      color="primary"
+                      outline
+                    >
+                      <GitHub size={15} />
+                    </Button.Ripple>
+                  </a>
                   <Button.Ripple
                     className="mr-1 btn-icon rounded-circle"
                     color="info"
                     outline
                   >
-                    <Twitter size={15} />
+                    <Linkedin size={15} />
                   </Button.Ripple>
                   <Button.Ripple
                     className="mr-1 btn-icon rounded-circle"
@@ -432,7 +409,7 @@ class DetailPage extends React.Component {
           </CardBody>
         </Card>
       </React.Fragment>
-    )
+    );
   }
 }
-export default DetailPage
+export default DetailPage;
