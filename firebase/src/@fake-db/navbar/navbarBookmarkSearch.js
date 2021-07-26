@@ -35,7 +35,7 @@ export const searchResult = [
   },
   {
     id: 5,
-    target: "About me",
+    target: "About-me",
     title: "About me",
     link: "/about-me",
     icon: "User",

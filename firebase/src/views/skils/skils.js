@@ -5,6 +5,7 @@ import { Download } from "react-feather";
 import StatisticsCard from "../../components/@vuexy/statisticsCard/StatisticsCard";
 import bootstrap from "../../assets/img/portfolio/bootstrap.png";
 import django from "../../assets/img/portfolio/django.png";
+import firebase from "../../assets/img/portfolio/firebase.png";
 import python from "../../assets/img/portfolio/python.png";
 import reactjs from "../../assets/img/portfolio/react.png";
 import monCV from "../../assets/img/portfolio/mon_cv.pdf";
@@ -34,7 +35,7 @@ const Skils = () => {
                 iconBg="primary"
                 icon={<img src={reactjs} height="50px" width="50px" />}
                 stat="REACT NATIVE"
-                statTitle="React navigation, Animated API, local Storage"
+                statTitle="Expo, React navigation, Animated API"
               />
             </Col>
             <Col lg="2">
@@ -72,7 +73,17 @@ const Skils = () => {
                 iconBg="primary"
                 icon={<img src={django} height="50px" width="50px" />}
                 stat="DJANGO"
-                statTitle="Views, endpoints, Urls, Databases, HTTP requests"
+                statTitle="Views, endpoints, Databases(ORM), Django-rest-framwork "
+              />
+            </Col>
+            <Col lg="2">
+              <StatisticsCard
+                hideChart
+                iconRight
+                iconBg="primary"
+                icon={<img src={firebase} height="40px" width="40px" />}
+                stat="FIREBASE"
+                statTitle="Authentication, cloud Firestore, realtime database, Storage, Hosting"
               />
             </Col>
           </Row>

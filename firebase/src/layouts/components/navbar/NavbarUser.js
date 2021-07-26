@@ -642,7 +642,7 @@ class NavbarUser extends React.PureComponent {
               </span>
               <span className="user-status">Available</span>
             </div>
-            <span data-tour="user">
+            <span onClick={()=>{history.push("/about-me")}} data-tour="user">
               <img
                 src={this.props.userImg}
                 className="round"
