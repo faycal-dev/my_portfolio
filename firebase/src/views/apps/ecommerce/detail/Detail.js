@@ -88,7 +88,7 @@ class DetailPage extends React.Component {
                 <h3>El-Mogherbi Mohammed Fayçal</h3>
                 <p className="text-muted">Student and freelancer</p>
                 <div className="d-flex flex-wrap">
-                  <h3 className="text-primary">Web and mobile developer</h3>
+                  <h3 className="text-primary">Web, mobile and machine learning solutions developer</h3>
                   <div className="ratings border-left ml-1 pl-1">
                     <span className="ml-1 font-medium-1 text-dark align-middle">
                       Computer science student
@@ -125,6 +125,14 @@ class DetailPage extends React.Component {
                 </ul>
                 <hr />
                 <h4>Skills</h4>
+                <div className="d-flex flex-wrap">
+                  <p className="mr-2">Machine learning and deep learning</p>
+                  <Star size={20} fill="#ff9f43" stroke="#ff9f43" />
+                  <Star size={20} fill="#ff9f43" stroke="#ff9f43" />
+                  <Star size={20} fill="#ff9f43" stroke="#ff9f43" />
+                  <Star size={20} fill="#ff9f43" stroke="#ff9f43" />
+                  <Star size={20} fill="#fff" stroke="#b8c2cc" />
+                </div>
                 <div className="d-flex flex-wrap">
                   <p className="mr-2">Front end development</p>
                   <Star size={20} fill="#ff9f43" stroke="#ff9f43" />

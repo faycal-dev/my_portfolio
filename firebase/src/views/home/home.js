@@ -63,6 +63,7 @@ const Home = () => {
                     delay: 40,
                     loop: true,
                     strings: [
+                      "My first skill is data science and machine learning",
                       "I'm a web developer using REACT JS and DJANGO",
                       "and",
                       "I'm a mobile app developer using REACT NATIVE",
