@@ -168,19 +168,21 @@ const Projects = () => {
         <animated.div style={animation4}>
           <Project
             params={{
-              effect: "coverflow",
+              effect: "cube",
               grabCursor: true,
-              centeredSlides: true,
-              slidesPerView: "auto",
-              coverflowEffect: {
-                rotate: 50,
-                stretch: 0,
-                depth: 100,
-                modifier: 1,
+              cubeEffect: {
+                shadow: true,
                 slideShadows: true,
+                shadowOffset: 20,
+                shadowScale: 0.94,
               },
               pagination: {
                 el: ".swiper-pagination",
+                clickable: true,
+              },
+              navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
               },
             }}
             images={imagesMadina}

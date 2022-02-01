@@ -10,24 +10,27 @@ const Home = () => {
   const [start, setstart] = React.useState(false);
 
   React.useEffect(() => {
+
     setAnimate(true);
     setTimeout(() => {
       setstart(true);
     }, 1000);
+
   }, []);
+
 
   const transition1 = useTransition(animate, {
     from: { x: 300, y: 0, opacity: 0 },
     enter: { x: 0, y: 0, opacity: 1, delay: 900 },
   });
+  const transition2 = useSpring({
+    from: { x: 0, y: -300, opacity: 0 },
+    to: { x: 0, y: 0, opacity: 1 },
+  });
   const transition3 = useSpring({
     from: { opacity: 0.5 },
     to: { opacity: 1 },
     loop: { reverse: true },
-  });
-  const transition2 = useSpring({
-    from: { x: 0, y: -300, opacity: 0 },
-    to: { x: 0, y: 0, opacity: 1 },
   });
   const transition4 = useSpring({
     from: { x: -300, opacity: 0 },
@@ -73,7 +76,7 @@ const Home = () => {
               </h3>
               <h4 style={{ opacity: 0.3 }}>{"</body>"}</h4>
             </animated.div>
-            <div style={{ marginTop: "80px" }} >
+            <div style={{ marginTop: "80px" }}>
               <animated.div style={transition3}>
                 {" "}
                 <Button.Ripple
