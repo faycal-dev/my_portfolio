@@ -86,20 +86,19 @@ class DetailPage extends React.Component {
               </Col>
               <Col md="7" sm="12">
                 <h3>El-Mogherbi Mohammed Fayçal</h3>
-                <p className="text-muted">Student and freelancer</p>
+                <p className="text-muted">Software engineer and freelancer</p>
                 <div className="d-flex flex-wrap">
                   <h3 className="text-primary">Web, mobile and machine learning solutions developer</h3>
                   <div className="ratings border-left ml-1 pl-1">
                     <span className="ml-1 font-medium-1 text-dark align-middle">
-                      Computer science student
+                      Junior software engineer
                     </span>
                   </div>
                 </div>
                 <hr />
                 <p>
-                  Hi i'm Fayçal and i am a student in the last year of my
-                  ingineering degree in computer science, I love coding, solving
-                  problemes and learning new technologies. Feel free to take a
+                  Hi i'm Fayçal and i am a newly graduated software engineer, I love coding, solving
+                  problemes, designing solutions and learning new technologies. Feel free to take a
                   look at my latest project HOPE YOU LIKE IT.
                 </p>
                 <ul className="list-unstyled">

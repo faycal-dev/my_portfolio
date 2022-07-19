@@ -8,6 +8,7 @@ import django from "../../assets/img/portfolio/django.png";
 import firebase from "../../assets/img/portfolio/firebase.png";
 import python from "../../assets/img/portfolio/python.png";
 import reactjs from "../../assets/img/portfolio/react.png";
+import ELK from "../../assets/img/portfolio/elasticsearch.png";
 import monCV from "../../assets/img/portfolio/mon_cv.pdf";
 
 const Skils = () => {
@@ -25,7 +26,7 @@ const Skils = () => {
                 iconBg="primary"
                 icon={<img src={reactjs} height="50px" width="50px" />}
                 stat="REACT JS"
-                statTitle="Redux, context API, react spring, hooks"
+                statTitle="Redux, context API, react spring, hooks, Bootstrap"
               />
             </Col>
             <Col lg="2">
@@ -43,9 +44,9 @@ const Skils = () => {
                 hideChart
                 iconRight
                 iconBg="primary"
-                icon={<img src={bootstrap} height="60px" width="60px" />}
-                stat="BOOTSTRAP"
-                statTitle="Page structure, Responsive style and better UI"
+                icon={<img src={ELK} height="40px" width="40px" />}
+                stat="ELK Stack"
+                statTitle="Elasticsearch, Logstash and Kibana"
               />
             </Col>
           </Row>
@@ -63,7 +64,7 @@ const Skils = () => {
                 iconBg="primary"
                 icon={<img src={python} height="40px" width="40px" />}
                 stat="PYTHON"
-                statTitle="Django, TensorFlow, Keras, Sklearn, Numpy, Pandas"
+                statTitle="TensorFlow, Keras, Sklearn, Numpy, Pandas, OpenCV, Librosa"
               />
             </Col>
             <Col lg="2">
@@ -83,7 +84,7 @@ const Skils = () => {
                 iconBg="primary"
                 icon={<img src={firebase} height="40px" width="40px" />}
                 stat="FIREBASE"
-                statTitle="Authentication, cloud Firestore, realtime database, Storage, Hosting"
+                statTitle="Authentication, cloud Firestore, realtime database, Hosting"
               />
             </Col>
           </Row>
@@ -133,8 +134,8 @@ const Skils = () => {
               textAlignLast: "center",
             }}
           >
-            I'm intermediate developer with 2 years experience in front end
-            development (react js and react native)
+            I'm a junior software engineer with 2 years of experience in web and mobile developpement
+ 
           </h3>
         </animated.div>
       </Row>
@@ -149,7 +150,7 @@ const Skils = () => {
               textAlignLast: "center",
             }}
           >
-            I speak Arabic,english and french{" "}
+            I speak Arabic,English and French{" "}
           </p>
         </animated.div>
       </Row>
